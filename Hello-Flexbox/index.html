@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container {
+      display: flex;
+      height: 200px;
+      /*flex-direction: column;*/
+    }
+
+    .container > * {
+      width: 200px;
+      height: 200px;
+    }
+
+    .grey {
+      background-color: lightgrey;
+    }
+
+    .green {
+      /*flex: 2 2 auto;*/
+      /*flex-grow: 2;*/
+      /*flex-shrink: 2;*/
+      /*flex-basis: 0;*/
+      background-color: lightgreen;
+    }
+
+    .blue {
+      /*flex: 1 1 auto;*/
+      /*flex-grow: 1;*/
+      /*flex-shrink: 1;*/
+      /*flex-basis: 0;*/
+      background-color: lightblue;
+    }
+
+    .pink {
+      background-color: lightpink;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .container > * {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grey"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="pink"></div>
+  </div>
+</body>
+</html>

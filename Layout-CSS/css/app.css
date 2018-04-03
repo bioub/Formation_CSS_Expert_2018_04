@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+header {
+  background-color: lightblue;
+  position: relative;
+  height: 100px;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header nav {
+  background-color: lightgreen;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header nav li {
+  display: inline;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.content > * {
+  float: left
+}
+
+.content > aside {
+  width: 30%;
+  background-color: yellow;
+  text-align: center;
+}
+
+.content > aside nav li {
+  height: 30px;
+  line-height: 30px;
+  margin: 5px 0;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.content > aside nav li:hover {
+  background-color: red;
+}
+
+.content > main {
+  /* width: calc(70% - 10px); */
+  width: 70%;
+  padding: 5px;
+}
+
+.breadcrumb {
+  margin: 10px 0;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+/* .breadcrumb li:not(:first-child)::before */
+.breadcrumb li + li::before {
+  content: ' > ';
+}
+
+.gallery {
+  overflow: hidden;
+}
+
+.gallery > div {
+  width: calc(33.33% - 8px);
+  height: 100px;
+  background-color: orange;
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.gallery > div:nth-child(3n) {
+  margin-right: 0;
+}
