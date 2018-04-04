@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body, .animation-x, .animation-y {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .animation-x {
+      animation: animation-x 1s linear alternate infinite;
+    }
+
+    .animation-y {
+      animation: animation-y 0.5s linear alternate infinite;
+    }
+
+    @keyframes animation-x {
+      to {
+        transform: translateX(100%) translateX(-100px);
+      }
+    }
+
+    @keyframes animation-y {
+      to {
+        transform: translateY(100%) translateY(-100px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animation-x">
+    <div class="animation-y">
+      <div class="ball"></div>
+    </div>
+  </div>
+</body>
+</html>

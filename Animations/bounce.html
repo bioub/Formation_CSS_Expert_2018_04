@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .ball:hover {
+      background-color: yellow;
+    }
+
+    .ball {
+      transition: background-color 1s;
+      position: absolute;
+      left: calc(50% - 50px);
+      bottom: calc(50% - 50px);
+      border-radius: 50%;
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      /*animation: bounce 1s infinite cubic-bezier(0.5, 0, 0.5, 1);*/
+      animation: gravity 3s ease;
+
+      /*
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+      */
+
+      /*animation-timing-function: ease;*/
+    }
+
+    @keyframes bounce-x {
+      from {
+        left: 0;
+      }
+
+      50% {
+        left: calc(50% - 50px);
+      }
+
+      to {
+        left: calc(100% - 100px);
+      }
+    }
+
+    @keyframes bounce-y {
+      from {
+        bottom: calc(50% - 50px);
+      }
+
+      50% {
+        bottom: 0;
+      }
+
+      to {
+        bottom: calc(50% - 50px);
+      }
+    }
+
+    @keyframes bounce {
+      from {
+        bottom: calc(50% - 50px);
+      }
+
+      50% {
+        bottom: 0;
+      }
+
+      to {
+        bottom: calc(50% - 50px);
+      }
+    }
+
+    @keyframes gravity {
+      from {
+        bottom: 40%;
+      }
+
+      10% {
+        bottom: 0;
+      }
+
+      20% {
+        bottom: 20%;
+      }
+
+      30% {
+        bottom: 0;
+      }
+
+      40% {
+        bottom: 10%;
+      }
+
+      50% {
+        bottom: 0;
+      }
+
+      60% {
+        bottom: 5%;
+      }
+
+      70% {
+        bottom: 0;
+      }
+
+      80% {
+        bottom: 2.5%;
+      }
+
+      90% {
+        bottom: 0;
+      }
+
+      100% {
+        bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>
