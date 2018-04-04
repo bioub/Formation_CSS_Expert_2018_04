@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body, .container {
+      margin: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: "h h h h"
+                           "m m f f";
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 200px 1fr;
+    }
+
+    header {
+      grid-area: h;
+      /*grid-row-start: 1;*/
+      /*grid-row-end: span 1;*/
+      /*grid-column-start: 1;*/
+      /*grid-column-end: span 3;*/
+      background-color: lightcoral;
+    }
+
+    main {
+      grid-area: m;
+      /*grid-row-start: 2;*/
+      /*grid-row-end: span 1;*/
+      /*grid-column-start: 1;*/
+      /*grid-column-end: span 3;*/
+      background-color: lightblue;
+    }
+
+    footer {
+      grid-area: f;
+      /*grid-row-start: 1;*/
+      /*grid-row-end: span 2;*/
+      /*grid-column-start: 4;*/
+      /*grid-column-end: span 1;*/
+      background-color: lightgreen;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <main>main</main>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
