@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended": "^2.1.0"
+  },
+  "scripts": {
+    "lint:css": "stylelint \"css/**.css\""
+  }
+}

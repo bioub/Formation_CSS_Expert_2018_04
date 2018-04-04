@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "node-sass": "^4.8.3",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.0.0"
+  },
+  "scripts": {
+    "lint:scss": "stylelint \"scss/**.scss\"",
+    "build:scss": "node-sass --output css scss",
+    "watch:scss": "node-sass -w --output css scss"
+  }
+}
