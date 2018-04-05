@@ -1,4 +1,5 @@
-const horlogeStart = require('./js/horloge');
+require('../scss/app.scss');
+const horlogeStart = require('./horloge');
 
 const horlogeElt = document.querySelector('mon-horloge');
 
