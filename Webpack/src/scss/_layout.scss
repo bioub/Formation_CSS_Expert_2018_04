@@ -1,0 +1,66 @@
+.container {
+  @include height-100;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 800px;*/
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "a m";
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 100px minmax(auto, 1fr);
+
+  @media (max-width: 600px) {
+    grid-template-areas:
+      "h"
+      "m"
+      "a";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px minmax(auto, 1fr) auto;
+  }
+}
+
+header {
+  grid-area: h;
+  background-color: darken($color, 10%);
+  position: relative;
+
+  h2 {
+    margin: 0;
+  }
+
+  nav {
+    background-color: lighten($color, 5%);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  nav li {
+    display: inline;
+  }
+}
+
+aside {
+  grid-area: a;
+  background-color: lighten($color, 10%);
+  text-align: center;
+
+  nav li {
+    height: $aside-item-height;
+    line-height: $aside-item-height;
+    margin: 5px 0;
+    background-color: $color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color, 5%);
+    }
+  }
+}
+
+main {
+  grid-area: m;
+  padding: 5px;
+}

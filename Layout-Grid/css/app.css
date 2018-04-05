@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html, body, .container {
+html, body  {
   height: 100%;
 }
 
@@ -17,6 +17,7 @@ nav ul {
 }
 
 .container {
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   /*width: 800px;*/
@@ -48,13 +49,13 @@ nav ul {
   display: inline;
 }
 
-aside {
+.aside {
   grid-area: a;
   background-color: yellow;
   text-align: center;
 }
 
-aside nav li {
+.aside__menu__item {
   height: 30px;
   line-height: 30px;
   margin: 5px 0;
@@ -62,11 +63,11 @@ aside nav li {
   cursor: pointer;
 }
 
-aside nav li:hover {
+.aside__menu__item:hover {
   background-color: red;
 }
 
-main {
+.main {
   grid-area: m;
   padding: 5px;
 }
@@ -75,12 +76,16 @@ main {
   margin: 10px 0;
 }
 
-.breadcrumb li {
+.breadcrumb__item {
   display: inline;
 }
 
-.breadcrumb li + li:before {
+.breadcrumb__item::before {
   content: " > ";
+}
+
+.breadcrumb__item_first::before {
+  content: "";
 }
 
 .gallery {
@@ -89,7 +94,7 @@ main {
   grid-gap: 12px;
 }
 
-.gallery > div {
+.gallery__item {
   width: 100%;
   height: 100px;
   background-color: orange;

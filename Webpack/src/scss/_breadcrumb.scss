@@ -1,0 +1,11 @@
+.breadcrumb {
+  margin: 10px 0;
+
+  li {
+    display: inline;
+
+    + li:before {
+      content: " > ";
+    }
+  }
+}
