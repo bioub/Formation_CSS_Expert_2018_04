@@ -27,24 +27,24 @@ nav ul {
   grid-template-rows: 100px minmax(auto, 1fr);
 }
 
-header {
+.header {
   grid-area: h;
   background-color: lightblue;
   position: relative;
 }
 
-header h2 {
+.header__title {
   margin: 0;
 }
 
-header nav {
+.header__menu {
   background-color: lightgreen;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-header nav li {
+.header__menu__item {
   display: inline;
 }
 

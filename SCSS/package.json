@@ -1,13 +1,16 @@
 {
   "devDependencies": {
     "node-sass": "^4.8.3",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.11.1",
     "stylelint": "^9.2.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-scss": "^3.0.0"
   },
   "scripts": {
     "lint:scss": "stylelint \"scss/**.scss\"",
-    "build:scss": "node-sass --output css scss",
-    "watch:scss": "node-sass -w --output css scss"
+    "build:scss": "node-sass --recursive --output css scss",
+    "watch:scss": "nodemon -e scss -x \"npm run build:scss\"",
+    "format:scss": "prettier --write \"scss/**.scss\""
   }
 }

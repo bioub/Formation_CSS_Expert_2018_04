@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box; }
 
-html, body, .container {
+html {
   height: 100%; }
 
 body {
+  height: 100%;
   margin: 0; }
 
 nav ul {
@@ -12,7 +13,15 @@ nav ul {
   padding-left: 0;
   list-style-type: none; }
 
+.breadcrumb {
+  margin: 10px 0; }
+  .breadcrumb li {
+    display: inline; }
+    .breadcrumb li + li:before {
+      content: " > "; }
+
 .container {
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   /*width: 800px;*/
@@ -20,51 +29,42 @@ nav ul {
   grid-template-areas: "h h" "a m";
   grid-template-columns: 30% 1fr;
   grid-template-rows: 100px minmax(auto, 1fr); }
+  @media (max-width: 600px) {
+    .container {
+      grid-template-areas: "h" "m" "a";
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px minmax(auto, 1fr) auto; } }
 
 header {
   grid-area: h;
-  background-color: lightblue;
+  background-color: #48ef54;
   position: relative; }
-
-header h2 {
-  margin: 0; }
-
-header nav {
-  background-color: lightgreen;
-  position: absolute;
-  top: 0;
-  right: 0; }
-
-header nav li {
-  display: inline; }
+  header h2 {
+    margin: 0; }
+  header nav {
+    background-color: #8ef596;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  header nav li {
+    display: inline; }
 
 aside {
   grid-area: a;
-  background-color: yellow;
+  background-color: #a6f7ac;
   text-align: center; }
-
-aside nav li {
-  height: 100px;
-  line-height: 100px;
-  margin: 5px 0;
-  background-color: orange;
-  cursor: pointer; }
-
-aside nav li:hover {
-  background-color: #e69500; }
+  aside nav li {
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 0;
+    background-color: #77f380;
+    cursor: pointer; }
+    aside nav li:hover {
+      background-color: #60f16a; }
 
 main {
   grid-area: m;
   padding: 5px; }
-
-.breadcrumb {
-  margin: 10px 0; }
-
-.breadcrumb li {
-  display: inline; }
-
-.breadcrumb li + li:before {
-  content: " > "; }
 
 .gallery {
   display: grid;
@@ -73,22 +73,4 @@ main {
   .gallery > div {
     width: 100%;
     height: 100px;
-    background-color: orange; }
-
-/*
-@media (max-width: 600px) {
-  .content {
-    flex-direction: column;
-  }
-
-  .content > main {
-    order: 1;
-    width: 100%;
-  }
-
-  .content > aside {
-    order: 2;
-    width: 100%;
-  }
-}
-*/
+    background-color: #77f380; }
